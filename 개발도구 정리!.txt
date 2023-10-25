@@ -1,0 +1,71 @@
+23.10.25 작성
+
+1. 자바 (자바 프로그램 다운로드 JDK 11)
+2. 개발도구 -> 이클립스 2020 - 09
+3. HTML CSS JAVASCRIPT JQUERY -> 개발도구 : vs code
+4. DB -> my sql 5.7 , 오라클db 11g
+5. JSP -> 이클립스
+   lib  커넥터, cos, jstl 
+-------------------------------------------------
+<<스프링>> 
+- https://github.com/spring-attic/toolsuite-distribution/wiki/Spring-Tool-Suite-3
+- 4.21 첫번째 윈도우 버전 다운
+- https://download.springsource.com/release/STS/3.9.18.RELEASE/dist/e4.21/spring-tool-suite-3.9.18.RELEASE-e4.21.0-win32-x86_64.zip
+- 압축 풀고 sts-bundle을 c 드라이브에 복붙!
+-  sts-bundle -> sts-3.9.어쩌고 들가기 -> STS 실행
+- 저장 경로 기본, 아래 체크 -> Lanch
+
+- 워크스페이스 저장소 : 내 pc -> 문서 -> workspace-sts-3.9.18.RELEASE
+- 글꼴 : window -> gereral -> Appearance -> colors and fonts -> Basic 폴더 -> Text Font
+
+-  sts-bundle -> sts-3.9.어쩌고 들가기 -> STS 텍스트 파일 열기 (메모장)
+
+ -> [원본] 
+-startup
+plugins/org.eclipse.equinox.launcher_1.6.300.v20210813-1054.jar
+--launcher.library
+plugins/org.eclipse.equinox.launcher.win32.win32.x86_64_1.2.300.v20210828-0802
+-product
+org.springsource.sts.ide
+--launcher.defaultAction
+openFile
+-vmargs
+-Dosgi.requiredJavaVersion=11
+-Dosgi.dataAreaRequiresExplicitInit=true
+-Xms256m
+-Xmx2048m
+--add-modules=ALL-SYSTEM
+-Dosgi.module.lock.timeout=10
+
+-> [버전 맞추기 수정]
+-vm
+C:\Program Files\Java\jdk-11\bin\javaw.exe
+-startup
+plugins/org.eclipse.equinox.launcher_1.6.300.v20210813-1054.jar
+--launcher.library
+plugins/org.eclipse.equinox.launcher.win32.win32.x86_64_1.2.300.v20210828-0802
+-product
+org.springsource.sts.ide
+--launcher.defaultAction
+openFile
+-vmargs
+-Dosgi.requiredJavaVersion=11
+-Dosgi.dataAreaRequiresExplicitInit=true
+-Xms256m
+-Xmx2048m
+--add-modules=ALL-SYSTEM
+-Dosgi.module.lock.timeout=10
+-------------------------------------------------
+STS 실행 -> 왼쪽 상단 File -> New -> Spring Legacy Project 들어가기 -> 'Spring MVC Project' 있나 확인!! 
+-> 없으면 Refresh 누르기 (그래도 안보이면 옆에 Configure 어쩌고 누르기)
+
+-------------------------------------------------
+port 번호 
+-> 오라클 db 1521
+-> mysql 8080
+-> sts 8082 (왼쪽 하단 톰캣 더블클릭 -> Ports 설정 -> Tomcat admin port : 8007 , HTTP/1.1 : 8082로 변경
+-------------------------------------------------
+Lombok 라이브러리 설치
+https://projectlombok.org/download -> 다운
+
+
