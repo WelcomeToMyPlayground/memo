@@ -1,0 +1,13 @@
+11.13 오후 - 안드로이드
+위치: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Android Studio
+작업물은 : 로컬디스크 c -> 사용자 -> kj -> AndroidStudioProjects 에 있음
+다운 : https://developer.android.com/studio?hl=ko
+
+- SDK 란?
+-프로젝트 이름 첫글자는 반드시 대문자
+- 패키지 3개로 쪼갬 com.example.hello 
+-----------------------------------------------------------
+그림파일 res -> drawable 
+기본 색상은 colors.xml에 
+기본 문자는 string.xml에 
+layout은 activity_main.xml에 
