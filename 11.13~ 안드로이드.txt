@@ -1,0 +1,74 @@
+11.13 
+
+위치: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Android Studio
+작업물 위치 : 로컬디스크 c -> 사용자 -> kj -> AndroidStudioProjects 에 있음
+안드로이드 앱 다운 : https://developer.android.com/studio?hl=ko
+-----------------------------------------------------------
+- SDK 란?
+-프로젝트 이름 첫글자는 반드시 대문자
+- 패키지 3개로 쪼갬 com.example.hello 
+-----------------------------------------------------------
+- 그림파일은 res -> drawable 파일에 붙여넣기 
+- 기본 색상은 colors.xml에 
+- 기본 문자는 string.xml에 
+- layout은 activity_main.xml에 
+-----------------------------------------------------------
+11.14 
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+-----------------------------------------------------------
+- xml 이랑 java 파일이 연결되어 하나의 화면을 보여주는 것임
+(activity_main.xml 이랑 MainActivity.java 파일) 
+
+- activity_main.xml : 앱의 첫 화면이 보여줄 모양을 의미
+-----------------------------------------------------------
+11.15
+
+- 안드로이드는 PNG 파일 추천 (naver.PNG)
+- 버튼 색상 변경은 backgroundTint (backgroundTintMode)
+- 글자 크기는 textSize (단위는 sp)
+- AppCompatActivity 란?
+- 새로운 화면 만들기 : 현재 폴더 (app) 우클릭 -> new -> Activity -> Empty Views Activity 
+- 인텐트(Intent) : 내가 하고자 하는 행위를 전달 (우편물 같음) 
+   = 인텐트를 사용하면 앱을 구성하는 화면을 새로 띄우거나 화면 간에 데이터를 전달할 수 있음
+-----------------------------------------------------------
+- setContentView : 화면에 무엇을 보여줄 것인지 설정해주는 역할 (결정하는 함수)
+- R.layout.activity_main : 사용자가 보게 될 화면 모양의 정보
+- app/res/layout/activity_main.xml : 자바 소스에서 R.layout.activity_main이라고 입력하여 가져올 수 있는 프로젝트 안의 파일이며, 화면을 구성할 때 사용
+- Intent : 어떤 기능을 실행할 것인지 지정할 때 사용
+- Toast : 화면에 잠깐 보였다 없어지는 메세지를 간단하게 보여주고 싶을 때 사용
+-----------------------------------------------------------
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        ImageButton btn_login = (ImageButton) findViewById(R.id.imageButton);
+
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),LoginExample2.class);
+                startActivity(intent);
+            }
+        });
+    }
+}
+-----------------------------------------------------------
+11.16 
+- 맨 위 부모 레이아웃은 (ConstraintLayout) 은 Layout -> layout_width랑 layout_height가 match_parent
+- background 는 레이아웃 배경색
+- backgroundTint 는 버튼 배경화면색
+- 반드시 위치 값을 잡아줄 것 (좌,상)
+- 새로 만들고 나서  build.gradle.kts(Module:app) 들어가서 compileSdk = 34 , targetSdk = 34 로 변경 후 상단 Sync Now
+- 레이아웃 -> Common Attrinbutes -> horizontal 가로 수평 배치, vertical 세로 배치 
