@@ -1,0 +1,60 @@
+CSS-Flexbox  ( https://studiomeal.com/archives/197)
+1. 자식의 부모 엘리먼트에 display: flex;를 주면 된다
+2. 배치 방향 설정 flex-direction 
+
+row (기본값) : 아이템들이 행(가로) 방향으로 배치됨
+row - reverse :  역순으로 행(가로) 방향 배치
+column : 열(세로) 방향 배치
+column-reverse : 역순으로 열(세로) 배치
+
+* 크기가 작은 모바일 기기에서 column으로 배치하다가 일정 폭 이상이 되면 row로 바꿔주는 식으로 반응형 레이아웃을 구현
+
+3. 줄넘김 처리 설정 flex-wrap
+: 컨테이너가 더 이상 아이템들을 한 줄에 담을 여유 공간이 없을 때 아이템 줄바꿈을 어떻게 할지 결정하는 속성
+
+flex-wrap : ?
+
+nowrap (기본값) : 줄바꿈 안함. 넘치면 삐져나감
+wrap : 줄바꿈. float 이나 inline-block으로 배치한 요소들과 비슷하게 동작
+wrap-reverse : 줄바꿈 하는데, 아이템을 역순으로 배치함
+
+4. flex-flow 
+: flex-direction과 flex-wrap을 한꺼번에 지정할 수 있는 단축 속성. 순서대로 한칸 떼고 써주면 된다
+
+flex-flow : row wrap;
+
+flex-direction : row;
+flex-wrap: wrap; 
+
+5. 메인축 방향 정렬 justify-content
+: 메인축 방향으로 아이템들을 정렬하는 속성
+
+justify-content: ?
+
+flex-start (기본값) : 아이템들을 시작점으로 정렬 . flex-direction이 row(가로 배치)일 때는 왼쪽, column(세로 배치)일 때는 위
+flex-end : 아이템들을 끝점으로 정렬. flex-direction이 row(가로 배치)일 때는 오른쪽, column(세로 배치)일 때는 아래
+center : 아이템들을 가운데로 정렬
+space-between : 아이템들의 “사이(between)”에 균일한 간격을 만들어 줌
+space-around : 아이템들의 “둘레(around)”에 균일한 간격을 만들어 줌
+space-evenly : 아이템들의 사이와 양 끝에 균일한 간격을 만들어 줌
+
+6. 수직축 방향 정렬 align-items
+: 수직축 방향으로 아이템을들 정렬하는 속성. justify-content와 수직 방향의 정렬이라고 생각하면 됨
+
+align-items: ?
+
+stretch (기본값) : 아이템들이 수직축 방향으로 끝까지 쭉 늘어남
+flex-start : 아이템들을 시작점으로 정렬. 
+flex-end : 아이템들을 끝으로 정렬
+center : 아이템들을 가운데로 정렬
+baseline : 아이템들을 텍스트 베이스라인 기준으로 정렬
+
+
+7. 한 가운데 배치
+
+justify-content: center;
+align-item: center;
+
+8. 
+
+
