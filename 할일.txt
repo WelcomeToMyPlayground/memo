@@ -1,9 +1,0 @@
-- 메인페이지 index.html 재수정 (a태그 밑줄 없애기, hover 기능, 문구점 icon 끌어오기)
-- 게시판 정렬에 따른 div 만들기 (js..) 
-   -> js innerHTML 사용해서 div 교체 
-    -> 기본값 small, <-> big
-    -> div에 onclick 걸어거리고 눌렀을때 class나 id가 big으로 변경되도록 (반대로도 o )
-      ex. <div id="small" onclick="tran()"></div)
-- 기준은 갤s8+ (360:740)
-- 기본 정렬은 -> 4행 2열 
-- 
