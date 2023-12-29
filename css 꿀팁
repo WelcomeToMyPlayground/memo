@@ -1,0 +1,13 @@
+1. textarea 영역 크기 조절 없애기
+<textarea style='resize:none;'></textarea>
+
+2. background-color 투명 또는 배경 없애기
+background-color:transparent;
+(transparent는 투명을 의미)
+
+또는 
+border: 0;
+background-color:transparent;
+
+   
+3. https://fontawesome.com/icons 아이콘
